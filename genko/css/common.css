@@ -1,0 +1,2109 @@
+/*********************************/
+/* IE6用の記述
+ * 解説
+ * 「* html」を記述することで、IE6用の設定となります。 */
+* html body {
+	background-color: #fdfdfd;
+	margin: 0px;
+	overflow-x: hidden;
+	font-size: 16px
+}
+
+/* IE8用の記述
+ * 解説
+ * IE8では、「overflow-x」をしようすると、マウスホイールでのスクロールが動作しなかった。
+ * 「position」の記述を行うことでスクロール動作が可能となる。 */
+body {
+	background-color: #fdfdfd;
+	margin: 0px;
+	overflow-x: hidden;
+	position: static;
+	font-size: 16px
+}
+
+form {
+	margin: 0px;
+}
+
+.article {
+	width: 995px;
+	margin: 0px auto;
+	text-align: left;
+}
+
+.pager {
+	margin-left: 20px;
+	text-align: left;
+}
+
+.pager strong {
+	font-weight: bold;
+}
+
+.pager .current_page {
+	color: red;
+}
+
+.pager .back1 {
+	height: 23px;
+	width: 23px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.pager .back2 {
+	height: 23px;
+	width: 23px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.pager .next1 {
+	height: 23px;
+	width: 23px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.pager .next2 {
+	height: 23px;
+	width: 23px;
+	vertical-align: middle;
+	border-style: none;
+}
+
+input[type="button"] {
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+A {
+	font-size: 12px;
+	text-decoration: none;
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+A:Visited {
+	color: blue;
+}
+
+A:Active {
+	color: red;
+}
+
+A:Hover {
+	color: red;
+}
+
+A.menu:Hover {
+	width: 100%;
+	filter: glow(color = blue);
+}
+
+table {
+	table-layout: fixed;
+}
+
+tr.bgcolor0 {
+	background-color: #efefef;
+}
+
+tr.bgcolor1 {
+	background-color: #deeffd;
+}
+
+tr.bgcolor2 {
+	background-color: #FFFF00;
+}
+
+td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+td.list_head {
+	background-color: silver;
+	color: black;
+	text-align: center;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+	font-weight: normal;
+	border-color: #efefef darkslategray darkslategray #efefef;
+	border-style: solid;
+	border-width: 1px;
+	*border-width: 1.5px;
+	filter: alpha(opacity = 100, finishopacity = 50, style = 1, startX = 0, startY = 200, finishX = 0, finishY = 0);
+	background: linear-gradient(#dddddd, #cccccc);
+}
+
+td.list_head2 {
+	background-color: silver;
+	color: black;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+	font-weight: normal;
+	border-color: #efefef darkslategray darkslategray #efefef;
+	border-style: solid;
+	border-width: 1px;
+	*border-width: 1.5px;
+	filter: alpha(opacity = 100, finishopacity = 50, style = 1, startX = 0, startY = 200, finishX = 0, finishY = 0);
+	background: linear-gradient(#dddddd, #cccccc);
+}
+
+td.list_top {
+	background-color: #fdfdfd;
+	color: black;
+	text-align: center;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+td.list_body {
+	color: black;
+	height: 23px;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+td.list_body2 {
+	color: black;
+	height: 23px;
+	font-size: 8pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+td.list_body3 {
+	color: black;
+	height: 23px;
+	font-size: 7.5pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+td.list_body4 {
+	color: black;
+	height: 23px;
+	font-size: 10pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+td.list_body_small {
+	color: black;
+	height: 15px;
+	font-size: 8pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+div.scroll {
+	height: 80px;
+	width: 930px;
+	background-color: ee0000;
+	overflow-y: auto;
+}
+
+p.sien {
+	color: #ff0000;
+	font-size: 12pt;
+}
+
+/*ユーザ情報*/
+td.cl_body {
+	background-color: #c0ecff;
+	font-size: 90%;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic";
+	text-align: center;
+	border: #b3b3b3 solid 1px;
+	padding: 4px;
+}
+
+td.el_body {
+	background-color: #ffffff;
+	font-size: 90%;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic";
+	text-align: left;
+	border: #b3b3b3 solid 1px;
+	padding: 4px;
+}
+
+td.el_body2 {
+	background-color: #efefef;
+	font-size: 9pt;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic";
+	text-align: center;
+	vertical-align: middle;
+	border: silver solid 1px;
+}
+
+/*メニュー項目用*/
+td.head_body {
+	background-color: lavenderblush;
+	font-size: 9pt;
+	text-align: center;
+	vertical-align: middle;
+	border: silver solid 1px;
+}
+
+td.data_body1 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body2 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid oldlace;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body3 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid lavender;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body4 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid peachpuff;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body5 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #accfec;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body6 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid lemonchiffon;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body7 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid thistle;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body8 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body9 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body10 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body11 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body12 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body13 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body13 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body14 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body15 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.data_body16 {
+	border: silver 1px;
+	border-style: none solid solid;
+	background-color: #efefef;
+	border-left: 10px solid #deeffd;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: middle;
+	height: 18px;
+}
+
+td.btnback {
+	background-color: #fdfdfd;
+}
+
+td.list_br {
+	cursor: pointer;
+	cursor: hand;
+	line-height: 110%;
+}
+
+/*タイトルバー*/
+.title {
+	border-spacing: 0px;
+	white-space: nowrap;
+	*border-collapse: collapse;
+	*table-layout: auto;
+}
+
+.titlebar {
+	background: url(../images/head_pigeon.gif) no-repeat;
+	color: #1e6cb1;
+	width: 100%;
+	height: 40px;
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: Tahoma, "MS UI Gothic", "lr oSVbN", sans-serif;
+}
+
+.subtitlebar {
+	color: #1e6cb1;
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: Tahoma, "MS UI Gothic", "lr oSVbN", sans-serif;
+}
+
+.titlebar td {
+	height: 40px;
+	padding-left: 45px;
+}
+
+.titlebutton {
+	display: inline-block;
+	padding-left: 10px;
+	float: right;
+}
+
+a.titlebutton_on {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 80%;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic";
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	margin-top: 2px;
+	padding: 2px;
+}
+
+a:Visited.titlebutton_on {
+	color: #FFFFFF;
+}
+
+a:hover.titlebutton_on {
+	color: #ff0000;
+	border-color: #FF0000;
+}
+
+.titlebacka {
+	width: 8px;
+	background: url(../images/head_edge.gif) no-repeat;
+}
+
+.titlebackb {
+	width: 100%;
+	background: url(../images/head_back.gif) repeat-x;
+}
+
+.titlebackc {
+	width: 0px;
+	background: url(../images/head_edge2.gif) no-repeat;
+}
+
+/*タイトルライン*/
+.titleline {
+	background-color: navy;
+}
+
+/*タイトルのカラー*/
+.titlecolor {
+	background-color: #accfec;
+}
+
+.tableborder {
+	background-color: #FFFFDA;
+	border: 1px solid black;
+	font-size: 9pt;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/*画面遷移用の文字*/
+.linkcolor {
+	font-size: 12px;
+	text-decoration: none;
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+/*テーブルの余白*/
+.tablefrm {
+	font-size: 9pt;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+.tablefrm2 {
+	font-size: 9pt;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tablefrm3 {
+	font-size: 9pt;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+.tablefrm4 {
+	font-size: 9pt;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+
+.tablemargin {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*一番上のテーブルのfontサイズ*/
+.tablesize {
+	font-size: 9pt;
+}
+
+/*テーブルのボーダーカラーとフォントサイズ*/
+.tablecolor {
+	border: 1px solid silver;
+	font-size: 9pt;
+}
+/*テーブルの見出し*/
+.tablecolor2 {
+	border: 1px solid silver;
+	background-color: #accfec;
+	font-size: 9pt;
+}
+/*テーブルの入力項目*/
+.tablecolor3 {
+	border: 1px solid silver;
+	background-color: #deeffd;
+	font-size: 9pt;
+}
+
+.tablecolor4 {
+	border: 1px solid silver;
+	font-size: 9pt;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*テーブルの見出し!)必須項目*/
+.tdcolor {
+	border: 1px solid silver;
+	background-color: #accfec;
+	font-size: 9pt;
+	text-align: center;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+/*テーブルの見出し!)任意入力 H19.08.13 add_by kubo*/
+.tdcolor1 {
+	border: 1px solid silver;
+	background-color: #deeffd;
+	font-size: 9pt;
+	text-align: center;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+/*テーブルの入力項目 */
+.tdcolor2 {
+	border: 1px solid silver;
+	background-color: #efefef;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+/*テーブルの見出し!)入力不可*/
+.tdcolor3 {
+	border: 1px solid silver;
+	background-color: #efefef;
+	font-size: 9pt;
+	text-align: center;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+/*テーブルの見出し（センター揃えなし）*/
+.tdcolor_ {
+	border: 1px solid silver;
+	background-color: #accfec;
+	font-size: 9pt;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic", sans-serif;
+}
+
+.ttdcolor {
+	writing-mode: tb-rl;
+	border: 1px solid silver;
+	background-color: #accfec;
+	font-size: 9pt;
+	text-align: center;
+	font-family: "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+.ttdcolor1 {
+	writing-mode: tb-rl;
+	border: 1px solid silver;
+	background-color: #deeffd;
+	font-size: 9pt;
+	text-align: center;
+	font-family: "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+/*テーブルの見出し（縦書き）*/
+.tdcolor_tate1 {
+	border: 1px solid silver;
+	background-color: #accfec;
+	font-size: 9pt;
+	text-align: center;
+	font-family: "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+.tdcolor_tate2 {
+	border: 1px solid silver;
+	background-color: #deeffd;
+	font-size: 9pt;
+	text-align: center;
+	font-family: "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+/*テーブルの見出し（赤）*/
+.tdcolor4 {
+	border: 1px solid #D2B48C;
+	background-color: #CC3300;
+	font-size: 9pt;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+/*テーブルの見出し（緑）*/
+.tdcolor5 {
+	border: 1px solid #D2B48C;
+	background-color: #339933;
+	font-size: 9pt;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+/*行の高さ*/
+.trsize {
+	height: 28px;
+	*height: 25px;
+}
+
+.trsize2 {
+	height: 27px;
+}
+
+.trsize3 {
+	height: 60px;
+}
+
+.trsize4 {
+	height: 30px;
+}
+
+.trsize5 {
+	height: 1px;
+}
+
+.trsize6 {
+	height: 20px;
+}
+
+.trsize7 {
+	height: 5px;
+}
+
+.trsize8 {
+	height: 15px;
+}
+/*列幅の設定行*/
+.col_setter {
+	height: 0px;
+}
+
+/*カレンダー用サイズ*/
+.calbutton {
+	width: 60px;
+}
+
+.addline {
+	background-color: blue;
+	color: #fdfdfd;
+	width: 100%;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	filter: alpha(opacity = 80, finishopacity = 20, style = 1, startX = 0, startY = 0, finishX = 100, finishY = 100);
+	background: linear-gradient(to right,#4444ff, #ccccff);
+}
+
+/*ページナンバー*/
+.none {
+	background-color: #fdfdfd;
+	color: royalblue;
+	font-size: 9pt;
+	font-family: Arial, Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+/*数字入力*/
+.num {
+	font-size: 9pt;
+	font-family: Arial, Tahoma, "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: disabled;
+	text-align: right;
+}
+/*アルファベット入力*/
+.alp {
+	font-size: 9pt;
+	font-family: Arial, Tahoma, "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: disabled;
+}
+
+/*日付入力*/
+.day {
+	font-size: 9pt;
+	font-family: Arial, Tahoma, "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: disabled;
+	text-align: center;
+}
+/*日本語入力*/
+.jpn {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: active;
+}
+
+.jpn1 {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: inactive;
+}
+/*自動入力*/
+.aut {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	ime-mode: auto;
+}
+/*テキスト表示*/
+.txt {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	border-style: none;
+	background-color: #efefef;
+}
+
+.txt2 {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	border-style: none;
+	background-color: gainsboro;
+}
+
+.txt3 {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	border-style: none;
+	background-color: lavender;
+}
+
+.txtcen {
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	border-style: none;
+	background-color: #efefef;
+	text-align: center;
+}
+
+/*イベントボタン*/
+.eventbtn {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 11pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 90px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*イベントボタン　その２ */
+.eventbtn1 {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 9.5pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 65px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn1:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*イベントボタン　その３ --2008.11.27 add by moro（貸付状況明細紹介画面使用） */
+.eventbtn2 {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 9.5pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn2:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*イベントボタン　その４ （償還状況明細画面使用） */
+.eventbtn3 {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 9.5pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 75px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn3:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*イベントボタン　その５ --eventbtnでは文字数が足りなかった為 */
+.eventbtn_1 {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 10pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn_1:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*イベントボタン　その６ --eventbtnでは文字数が足りなかった為 */
+.eventbtn_2 {
+	background-color: royalblue;
+	color: #fdfdfd;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 10pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+}
+.eventbtn_2:disabled {
+	background-color: cornflowerBlue;
+	text-shadow: 1px 1px 1px #777777;
+	color: #dddddd;
+	cursor: auto;
+}
+
+/*ボタンのサイズ*/
+.minbtn {
+	*width: 60px;
+	*height: 21px;
+}
+
+.minbtn2 {
+	font-size: 7.5pt;
+	*width: 30px;
+	*height: 21px;
+}
+
+.minbtn3 {
+	*width: 45px;
+	*height: 21px;
+}
+
+.minbtn4 {
+	font-size: 8pt;
+	*width: 30px;
+	*height: 20px;
+}
+
+.minbtn5 {
+	*width: 35px;
+	*height: 21px;
+}
+
+.minbtn6 {
+	font-size: 8pt;
+	*width: 30px;
+	*height: 20px;
+}
+
+.minbtn7 {
+	*width: 120px;
+	*height: 21px;
+}
+
+.minbtn8 {
+	*width: 80px;
+	*height: 21px;
+}
+
+.minbtn9 {
+	*width: 180px;
+	*height: 21px;
+}
+
+/*一番下のinput type="button"以外のinput及びselectのサイズ*/
+.insize {
+	font-size: 9pt;
+	font-family: "ＭＳ Ｐゴシック", Tahoma, "MS UI Gothic";
+}
+
+.insize2 {
+	font-size: 7.5pt;
+}
+
+/*注釈文字*/
+.attention {
+	font-size: 9pt;
+	color: red;
+}
+
+/*ＴＯＰ画面：日次処理メッセージ用フォント*/
+.DayOkHon {
+	font-size: 9pt;
+	color: #000080;
+}
+
+.DayOkKari {
+	font-size: 9pt;
+	color: blue;
+}
+
+.DayErr {
+	font-size: 9pt;
+	color: red;
+}
+
+.DayOk {
+	font-size: 9pt;
+	color: #000080;
+}
+
+/*背景の色*/
+.backgroundcolor {
+	background-color: #fdfdfd;
+	margin-top: 1px;
+}
+
+.backgroundcolor2 {
+	background-color: blue;
+	color: #fdfdfd;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	filter: alpha(opacity = 80, finishopacity = 20, style = 1, startX = 0, startY = 0, finishX = 100, finishY = 100);
+	background: linear-gradient(to right,#4444ff, #ccccff);
+}
+
+.backgroundcolor3 {
+	background-color: silver;
+	color: black;
+	font-size: 9pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	filter: alpha(opacity = 100, finishopacity = 40, style = 1, startX = 0, startY = 0, finishX = 100, finishY = 100);
+	background: linear-gradient(to right,#dddddd, #cccccc);
+}
+
+/**** 「html」タグへの設定。 ****
+ * IE6の「html」タグに対して、横スクロール非表示の設定を行います。
+ * IE8の「html」タグに対しては設定不要です。
+ **** 記述方法の解説 ****
+ * 「* html」を記述することで、IE6用の設定となります。
+ *  「html」タグに対して、記述を行うため記述方法は以下になります。*/
+* html {
+	overflow-x: hidden;
+}
+
+/*
+    scrollbar-base-color: AliceBlue;
+    scrollbar-track-color: AliceBlue;
+*/
+
+/* =============================== */
+/* ----メニューのタブ化対応---- */
+/* =============================== */
+/* タブ表示部分のフレーム(業務No=1) */
+.tb1 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=1) */
+a.tb1_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb1_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb1_on:Hover {
+	color: #fe6031;
+}
+
+/* 業務メニュー部分のセル(業務No=1) */
+td.data_body1 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=2) */
+.tb2 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF3535;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=2) */
+a.tb2_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab2_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb2_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb2_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=2) */
+td.data_body2 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF3535;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=3) */
+.tb3 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=3) */
+a.tb3_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab3_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb3_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb3_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=3) */
+td.data_body3 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=4) */
+.tb4 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #F2F200;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=4) */
+a.tb4_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab4_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb4_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb4_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=4) */
+td.data_body4 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #F2F200;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=5) */
+.tb5 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF59FF;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=5) */
+a.tb5_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab5_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb5_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb5_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=5) */
+td.data_body5 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF59FF;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=6) */
+.tb6 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #3535FF;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=6) */
+a.tb6_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab6_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb6_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb6_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=6) */
+td.data_body6 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #3535FF;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=7) */
+.tb7 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #75FFBA;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=7) */
+a.tb7_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab7_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb7_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb7_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=7) */
+td.data_body7 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #75FFBA;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=8) */
+.tb8 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #a4e524;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+/*	text-align: center;	*/
+}
+/* カレントタブ(業務No=8) */
+a.tb8_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab8_on.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb8_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb8_on:Hover {
+	color: #fe6031;
+}
+/*
+a:link.tb8_on {
+	color:#ffffff;
+}
+a:visited.tb8_on {
+	color:#ffffff;
+}
+a:hover.tb8_on {
+	height: 23px;
+	margin: 0px -4px;
+	padding-top: 6px;
+	color:#cc0e03;
+	text-decoration: underline;
+}
+*/
+/* 業務メニュー部分のセル(業務No=8) */
+td.data_body8 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #a4e524;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=9) */
+.tb9 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=9) */
+a.tb9_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb9_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb9_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=9) */
+td.data_body9 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=10) */
+.tb10 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=10) */
+a.tb10_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb10_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb10_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=10) */
+td.data_body10 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=11) */
+.tb11 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=11) */
+a.tb11_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb11_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb11_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=11) */
+td.data_body11 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=12) */
+.tb12 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=12) */
+a.tb12_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb12_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb12_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=12) */
+td.data_body12 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=13) */
+.tb13 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=13) */
+a.tb13_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb13_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb13_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=13) */
+td.data_body13 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=14) */
+.tb14 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=14) */
+a.tb14_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb14_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb14_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=14) */
+td.data_body14 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=15) */
+.tb15 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=15) */
+a.tb15_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb15_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb15_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=15) */
+td.data_body15 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+/* タブ表示部分のフレーム(業務No=16) */
+.tb16 {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+/* カレントタブ(業務No=16) */
+a.tb16_on {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #FFFFFF;
+	background-image: url(../images/tab1_on_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a.tb16_on:Visited {
+	color: #FFFFFF;
+}
+
+A.tb16_on:Hover {
+	color: #fe6031;
+}
+/* 業務メニュー部分のセル(業務No=16) */
+td.data_body16 {
+	border: #cccccc 1px;
+	border-style: solid;
+	background-color: #ffffff;
+	/*	border-left:10px solid #FF9475;*/
+	border-left: 10px solid #138fff;
+	padding-left: 3px;
+	height: 40px;
+	text-align: left;
+}
+
+.tbMirror {
+	display: block;
+	width: 100%;
+	height: 29px;
+	border-bottom-width: 8px;
+	/*	border-bottom-color: #FF9475;*/
+	border-bottom-color: #138fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+
+/* 非カレントタブ */
+a.tab_off {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #006699;
+	background-image: url(../images/tab_off.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+a:Visited.tab_off {
+	margin: 0px;
+	padding-top: 6px;
+	color: #006699;
+	text-decoration: underline;
+}
+
+a:hover.tab_off {
+	margin: 0px;
+	padding-top: 6px;
+	color: #fe6031;
+	text-decoration: underline;
+}
+
+a.tab_off_mirror {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	margin: 0px;
+	padding-top: 6px;
+	color: #006699;
+	background-image: url(../images/tab_off_mirror.gif);
+	background-repeat: no-repeat;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+a:Visited.tab_off_mirror {
+	margin: 0px;
+	padding-top: 6px;
+	color: #006699;
+	text-decoration: underline;
+}
+
+a:hover.tab_off_mirror {
+	margin: 0px;
+	padding-top: 6px;
+	color: #fe6031;
+	text-decoration: underline;
+}
+
+.PaneOff {
+	text-align: center;
+	position: absolute;
+	visibility: hidden;
+	display: none;
+	top: 0px;
+	left: 0px;
+}
+
+.PaneOn {
+	text-align: center;
+	position: absolute;
+	visibility: visible;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/search.gif) no-repeat #000000;
+	background-position: center;
+	z-index: 999;
+	opacity: 0.25;
+}
+
+/*************************************************/
+/* 		カレンダー画面用						 */
+/*************************************************/
+input.prevmon {
+	font-family: Tahoma;
+	font-size: 18pt;
+	width: 45px;
+	height: 30px;
+	color: white;
+	background: transparent;
+	cursor: pointer;
+	border-width: 0;
+	border-color: white;
+	border-style: solid;
+}
+
+input.nextmon {
+	font-family: Tahoma;
+	font-size: 18pt;
+	width: 45px;
+	height: 30px;
+	color: white;
+	background: transparent;
+	cursor: pointer;
+	border-width: 0;
+	border-color: white;
+	border-style: solid;
+}
+
+input.daybutton {
+	font-family: Tahoma, Arial;
+	font-size: 12pt;
+	width: 40px;
+	height: 25px;
+	color: black;
+	background: white;
+	cursor: pointer;
+	border-width: 1;
+	border-color: white;
+	border-style: solid;
+}
+
+input.sunbutton {
+	font-family: Tahoma, Arial;
+	font-size: 12pt;
+	width: 40px;
+	height: 25px;
+	color: red;
+	background: white;
+	cursor: pointer;
+	border-width: 1;
+	border-color: white;
+	border-style: solid;
+}
+
+input.satbutton {
+	font-family: Tahoma, Arial;
+	font-size: 12pt;
+	width: 40px;
+	height: 25px;
+	color: blue;
+	background: white;
+	cursor: pointer;
+	border-width: 1;
+	border-color: white;
+	border-style: solid;
+}
+
+input.clearbutton {
+	font-family: Tahoma, Arial;
+	font-size: 11pt;
+	height: 21px;
+	width: 50px;
+	color: black;
+	background: white;
+	cursor: pointer;
+	border-width: 0;
+	border-color: white;
+	border-style: solid;
+}
+
+input.monthbutton {
+	font-family: Tahoma, arial, helvetica;
+	font-size: 11pt;
+	height: 21px;
+	width: 50px;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+}
+
+input.monthbutton2 {
+	font-family: Tahoma, arial, helvetica;
+	font-size: 16pt;
+	height: 50px;
+	width: 70px;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+}
+/*カレンダ画面用(ここまで)*/
+/*******************************************************************/
+
+.tooltip {
+	height: 12px;
+	width: 12px;
+	background-image: url(../images/help_01.png);
+	background-size:12px 12px;
+	display: inline-block;
+}
+
+.tooltip_box {
+	color: #fdfdfd;
+	font-size: 10pt;
+	font-family: Tahoma, "MS UI Gothic", "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: normal;
+	background-color: mediumblue;
+	border-width: 1px;
+	border-style: solid;
+	position: absolute;
+	white-space: nowrap;
+	display: none;
+	margin: 5px;
+	padding: 0px 5px;
+}

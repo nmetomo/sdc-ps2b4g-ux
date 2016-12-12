@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>児童扶養手当システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+			<h1>児童扶養手当システム<span>UI 改善バージョン</span></h1>
+			<ul class="header-info">
+				<li><i class="material-icons">access_time</i>平成28年7月1日 9:00</li>
+				<li><i class="material-icons">person</i>梅崎 智宏</li>
+				<li><i class="material-icons">power_settings_new</i>ログアウト</li>
+			</ul>
+		</header>
+
+		<nav class="nav-global">
+			<ul>
+				<li>
+					<a href="#nav-global-tab0">TOP</a>
+				</li>
+				<li>
+					<a href="#nav-global-tab1" class="dropdown-button" data-activates="nav-global-tab1">1.申請受付</a>
+					<ul id="nav-global-tab1" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!" class="tooltipped" data-tooltip="貸付申請者の一覧表を表示します。"><i class="material-icons">list</i>貸付申請者一覧</a></li>
+								<li><a href="#!" class="tooltipped" data-tooltip="貸付申請書を入力します。"><i class="material-icons">mode_edit</i>貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>償還計画シミュレーション</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">search</i>個別宛名検索・結果一覧</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>個別宛名管理</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab2" class="dropdown-button" data-activates="nav-global-tab2">2.選考決定</a>
+					<ul id="nav-global-tab2" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">print</i>貸付選考表作成</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>貸付者採用登録処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>貸付決定者一覧</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab3" class="dropdown-button" data-activates="nav-global-tab3">3.貸付台帳</a>
+					<ul id="nav-global-tab3" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">search</i>貸付者検索</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付者基本情報入力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>貸付処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>証明書提出状況一覧</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付停止入力</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>返納金管理</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付計画変更入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還計画変更入力</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（貸付関連）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="active">
+					<a href="#nav-global-tab4" class="dropdown-button" data-activates="nav-global-tab4" class="active">4.諸届等入力</a>
+					<ul id="nav-global-tab4" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>休学・復学届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>増額貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>辞退・減額申出書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付期間延長申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>継続貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>据置期間延長申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>支払猶予申請書入力</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還免除申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>違約金免除申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還方法変更入力</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>住所・氏名変更届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>死亡届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>口座番号変更届入力</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">print</i>受付処理簿作成</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>諸届等決裁状況一覧</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab5" class="dropdown-button" data-activates="nav-global-tab5">5.調定処理</a>
+					<ul id="nav-global-tab5" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">payment</i>償還金調定処理</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>口座振替データ作成</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>違約金調定処理</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>滞納分口座振替計画入力</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（調定関連）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab6" class="dropdown-button" data-activates="nav-global-tab6">6.収納滞納</a>
+					<ul id="nav-global-tab6" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">payment</i>収納消込処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>収納消込データ一覧</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>口座振替結果データ登録</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>督促処理</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>催告処理</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>分納納付書作成</a></li>
+								<li><a href="#!"><i class="material-icons">search</i>滞納状況検索</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>未収記事一覧</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>還付・充当一覧</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（収納・滞納）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab7" class="dropdown-button" data-activates="nav-global-tab7">7.年次統計</a>
+					<ul id="nav-global-tab7" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>年次処理</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>厚生労働省報告書作成</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab8" class="dropdown-button" data-activates="nav-global-tab8">8.マスタ保守</a>
+					<ul id="nav-global-tab8" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!" class="tooltipped" data-position="bottom" data-html="true" data-tooltip="システム利用者の<b>パスワード</b>を変更します。"><i class="material-icons">https</i>利用者パスワード変更</a></li>
+								<li><a href="#!"><i class="material-icons">supervisor_account</i>利用権限グループ設定</a></li>
+								<li><a href="#!"><i class="material-icons">security</i>利用者別権限設定</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>各種コード保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>郵便番号データ取込み</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>市町村コード変更</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>金融機関マスタ保守</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ＳＱＬ実行</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ファイルアップロード</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>操作ヘルプ内容保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ログデータ出力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>サーバログ確認</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>学校マスタ保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>委託者マスタ保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>資金利率等設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>修学･修業･就学支度限度額設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>連帯保証人基準設定</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定（滞納期間）</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定（滞納率）</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>統合宛名連携ファイル作成</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>統合宛名連携管理</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>名寄データ・個人番号一括取込</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="disabled">
+					<a href="#nav-global-tab9">9.予備</a>
+				</li>
+			</ul>
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li class="current">帳票作成処理（新規認定）</li>
+				</ul>
+
+				<h2>帳票作成処理（新規認定）</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+		</nav>
+
+		<main class="main" id="top">
+
+			<div class="vertical-flex">
+
+				<ul id="hoge-info" class="panel panel-primary collapsible">
+					<li>
+						<div class="panel-header collapsible-header active">
+							<h3 class="panel-title"><i class="material-icons">expand_less</i>検索条件</h3>
+						</div>
+						<div class="panel-body collapsible-body">
+							<div class="input-container">
+								<div class="row">
+
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>管轄事務所</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_section_cd" class="form-control">
+												<option value="">&nbsp;</option>
+												<option value="01">こども家庭</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>管轄市区町村</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_city_cd" class="form-control">
+												<option value="">&nbsp;</option>
+												<option value="01">佐賀市</option>
+												<option value="02">唐津市</option>
+												<option value="03">鳥栖市</option>
+												<option value="04">多久市</option>
+												<option value="05">伊万里市</option>
+												<option value="06">武雄市</option>
+												<option value="07">鹿島市</option>
+												<option value="08">小城市</option>
+												<option value="09">嬉野市</option>
+												<option value="10">神埼市</option>
+												<option value="11">吉野ヶ里町</option>
+												<option value="12">基山町</option>
+												<option value="13">上峰町</option>
+												<option value="14">みやき町</option>
+												<option value="15">玄海町</option>
+												<option value="16">有田町</option>
+												<option value="17">大町町</option>
+												<option value="18">江北町</option>
+												<option value="19">白石町</option>
+												<option value="20">太良町</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>申請種類</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_sinki_tennyu" class="form-control">
+												<option value="" >&nbsp;</option>
+												<option value="1">新規認定</option>
+												<option value="2">管外転入</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="input-item col md12 lg6">
+										<label>決裁年月日</label>
+										<div class="input-data">
+											<input name="Sei_Tyohyou_Sin_01_kessai_ymd_sta" type="text" class="form-control" maxlength="8" value="" />
+											<span><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+											<span>～</span>
+											<input name="Sei_Tyohyou_Sin_01_kessai_ymd_end" type="text" class="form-control" maxlength="8" value="H28/09/30" />
+											<span><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+										</div>
+									</div>
+
+									<div class="input-item col md12 lg6">
+										<label>請求年月日</label>
+										<div class="input-data">
+											<input name="Sei_Tyohyou_Sin_01_seikyu_ymd_sta" type="text" class="form-control" maxlength="8" value="" />
+											<span><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+											<span>～</span>
+											<input name="Sei_Tyohyou_Sin_01_seikyu_ymd_end" type="text" class="form-control" maxlength="8" value="" />
+											<span><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md6 lg3 xl3">
+										<label>証書番号</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_syo_kigo" class="col xs5 form-control">
+												<option value="1" selected="selected">佐児扶</option>
+												<option value="2" >佐児</option>
+											</select>
+											<input name="Sei_Tyohyou_Sin_01_syo_no" type="text" class="col xs7 form-control" maxlength="10" value="" />
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md6 lg3">
+										<label>カナ氏名</label>
+										<div class="input-data">
+											<input name="Sei_Tyohyou_Sin_01_kana" type="text" class="form-control" maxlength="100" value="" />
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md6 lg3">
+										<label>漢字氏名</label>
+										<div class="input-data">
+											<input name="Sei_Tyohyou_Sin_01_name" type="text" class="form-control" maxlength="100" value="" />
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md6 lg3">
+										<label>受付番号</label>
+										<div class="input-data">
+											<input name="Sei_Tyohyou_Sin_01_uke_no" type="text" class="form-control" maxlength="9" value="" />
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm6 md6 lg3">
+										<label>状態</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_kjyotai" class="form-control hissu">
+												<option value="">&nbsp;</option>
+												<option value="29">決裁待ち</option>
+												<option value="31">決裁済</option>
+												<option value="32">通知済</option>
+												<option value="93" selected="selected">決裁済・通知済</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="input-item col xs12 sm12 md6 lg6">
+										<label>帳票の種類</label>
+										<div class="input-data">
+											<select name="Sei_Tyohyou_Sin_01_tyohyou_type" class="form-control">
+												<option value="" >&nbsp;</option>
+												<option value="010">証書</option>
+												<option value="110">認定通知書</option>
+												<option value="120">支給停止通知書</option>
+												<option value="130">障害認定通知書</option>
+												<option value="140">移管通知書（転入）</option>
+												<option value="190">新規認定一覧</option>
+												<option value="210">認定請求却下通知書</option>
+												<option value="290">認定請求却下一覧</option>
+												<option value="810">受給資格者台帳</option>
+												<option value="820">受給資格者名簿</option>
+												<option value="910">認定者一覧名簿（兼受領書）</option>
+												<option value="920">通知書類及び対象者一覧の送付について</option>
+											</select>
+										</div>
+									</div>
+
+								</div><!-- class="row" -->
+							</div><!--  class="input-container" -->
+						</div><!-- class="panel-body" -->
+					</li>
+				</ul><!-- class="panel -->
+
+				<div class="panel panel-primary" style="height: 100%; overflow-y: scroll;">
+					<div class="panel-header active">
+						<h3 class="panel-title">検索結果</h3>
+					</div>
+					<div class="data-table">
+						<table>
+							<thead>
+								<tr>
+									<th style="width:5%;"  class="fld-select">選択</th>
+									<th style="width:10%;" class="sort">管轄事務所</th>
+									<th style="width:10%;" class="sort">管轄市町村</th>
+									<th style="width:15%;" class="sort">証書番号</th>
+									<th style="width:15%;" class="sort">氏名</th>
+									<th style="width:17%;" class="sort">住所</th>
+									<th style="width:16%;" class="sort">○○年月日</th>
+									<th style="width:12%;" class="sort">○○年月</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk1" value="1" class="filled-in" /><label for="chk1" /></td>
+									<td>○○○○○○○○○○</td>
+									<td>○○○○○○○○○○</td>
+									<td>○児扶12345678</td>
+									<td>○○○○○○○○○○</td>
+									<td>佐賀県佐賀市駅前中央１丁目２－３</td>
+									<td>平成28年12月31日</td>
+									<td>平成28年12月</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk2" value="2" class="filled-in" /><label for="chk2" /></td>
+									<td>１２３４５</td>
+									<td>１２３４５</td>
+									<td>cell-2-4</td>
+									<td>１２３　４５６</td>
+									<td>cell-2-5</td>
+									<td>H28/12/31</td>
+									<td>H28/12</td>
+								</tr>
+								<tr class="selected">
+									<td class="fld-select"><input type="checkbox" id="chk3" value="3" class="filled-in" /><label for="chk3" /></td>
+									<td>cell-3-2</td>
+									<td>cell-3-3</td>
+									<td>cell-3-4</td>
+									<td>cell-3-5</td>
+									<td>cell-3-5</td>
+									<td>cell-3-5</td>
+									<td>cell-3-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk4" value="4" class="filled-in" /><label for="chk4" /></td>
+									<td>cell-4-2</td>
+									<td>cell-4-3</td>
+									<td>cell-4-4</td>
+									<td>cell-4-5</td>
+									<td>cell-4-5</td>
+									<td>cell-4-5</td>
+									<td>cell-4-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk5" value="5" class="filled-in" /><label for="chk5" /></td>
+									<td>cell-5-2</td>
+									<td>cell-5-3</td>
+									<td>cell-5-4</td>
+									<td>cell-5-5</td>
+									<td>cell-5-5</td>
+									<td>cell-5-5</td>
+									<td>cell-5-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk6" value="6" class="filled-in" /><label for="chk6" /></td>
+									<td>cell-6-2</td>
+									<td>cell-6-3</td>
+									<td>cell-6-4</td>
+									<td>cell-6-5</td>
+									<td>cell-6-5</td>
+									<td>cell-6-5</td>
+									<td>cell-6-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk7" value="7" class="filled-in" /><label for="chk7" /></td>
+									<td>cell-7-2</td>
+									<td>cell-7-3</td>
+									<td>cell-7-4</td>
+									<td>cell-7-5</td>
+									<td>cell-7-5</td>
+									<td>cell-7-5</td>
+									<td>cell-7-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk8" value="8" class="filled-in" /><label for="chk8" /></td>
+									<td>cell-8-2</td>
+									<td>cell-8-3</td>
+									<td>cell-8-4</td>
+									<td>cell-8-5</td>
+									<td>cell-8-5</td>
+									<td>cell-8-5</td>
+									<td>cell-8-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk9" value="9" class="filled-in" /><label for="chk9" /></td>
+									<td>cell-9-2</td>
+									<td>cell-9-3</td>
+									<td>cell-9-4</td>
+									<td>cell-9-5</td>
+									<td>cell-9-5</td>
+									<td>cell-9-5</td>
+									<td>cell-9-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk10" value="10" class="filled-in" /><label for="chk10" /></td>
+									<td>cell-10-2</td>
+									<td>cell-10-3</td>
+									<td>cell-10-4</td>
+									<td>cell-10-5</td>
+									<td>cell-10-5</td>
+									<td>cell-10-5</td>
+									<td>cell-10-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk11" value="11" class="filled-in" /><label for="chk11" /></td>
+									<td>cell-11-2</td>
+									<td>cell-11-3</td>
+									<td>cell-11-4</td>
+									<td>cell-11-5</td>
+									<td>cell-11-5</td>
+									<td>cell-11-5</td>
+									<td>cell-11-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk12" value="12" class="filled-in" /><label for="chk12" /></td>
+									<td>cell-12-2</td>
+									<td>cell-12-3</td>
+									<td>cell-12-4</td>
+									<td>cell-12-5</td>
+									<td>cell-12-5</td>
+									<td>cell-12-5</td>
+									<td>cell-12-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk13" value="13" class="filled-in" /><label for="chk13" /></td>
+									<td>cell-13-2</td>
+									<td>cell-13-3</td>
+									<td>cell-13-4</td>
+									<td>cell-13-5</td>
+									<td>cell-13-5</td>
+									<td>cell-13-5</td>
+									<td>cell-13-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk14" value="14" class="filled-in" /><label for="chk14" /></td>
+									<td>cell-14-2</td>
+									<td>cell-14-3</td>
+									<td>cell-14-4</td>
+									<td>cell-14-5</td>
+									<td>cell-14-5</td>
+									<td>cell-14-5</td>
+									<td>cell-14-5</td>
+								</tr>
+								<tr>
+									<td class="fld-select"><input type="checkbox" id="chk15" value="15" class="filled-in" /><label for="chk15" /></td>
+									<td>cell-15-2</td>
+									<td>cell-15-3</td>
+									<td>cell-15-4</td>
+									<td>cell-15-5</td>
+									<td>cell-15-5</td>
+									<td>cell-15-5</td>
+									<td>cell-15-5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+				<button class="btn btn-primary waves-effect waves-light">表示</button>
+				<button class="btn btn-primary waves-effect waves-light">入力クリア</button>
+			</div>
+
+		</main>
+
+	</div><!-- id="wrapper" -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/common.js"></script>
+</body>
+</html>

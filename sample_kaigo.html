@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>○○システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+		</header>
+
+		<nav class="nav-global">
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li><a href="#">事業所一覧</a></li>
+					<li class="current">事業所詳細</li>
+				</ul>
+
+				<h2>事業所詳細</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+		</nav>
+
+		<main class="main" id="top">
+
+			<ul class="collapsible">
+				<li class="card-group">
+					<div class="card-group-header card-primary collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>申請情報</h3>
+					</div><!-- .card-group-header -->
+					<div class="collapsible-body">
+						<div class="card">
+							<div class="card-content">
+								<div class="row">
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>申請日</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="8" value="H27/05/22" />
+											<span class="input-group-addon"><input type="button" class="cal-btn" /></span>
+										</div><!-- .input-data -->
+									</div><!-- .input-item -->
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>受付日</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="8" value="H27/05/22" />
+											<span class="input-group-addon"><input type="button" class="cal-btn" /></span>
+										</div><!-- .input-data -->
+									</div><!-- .input-item -->
+									<div class="input-item col xs12 sm6 md4 lg3">
+										<label>事業所番号</label>
+										<div class="input-data">
+											4190200412
+										</div><!-- .input-data -->
+									</div><!-- .input-item -->
+								</div><!-- .row -->
+								<div class="row">
+									<div class="input-item col xs12 sm6">
+										<label>申請者名称</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="8" value="かきくけこ" />
+										</div><!-- .input-data -->
+									</div><!-- .input-item -->
+									<div class="input-item col xs12 sm6">
+										<label>申請者カナ名称</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="8" value="カキクケコ" />
+										</div><!-- .input-data -->
+									</div><!-- .input-item -->
+								</div><!-- .row -->
+							</div><!-- .card-content -->
+						</div><!-- .card -->
+						<div class="card-group-footer">
+							<button class="btn btn-primary waves-effect waves-light">申請者情報複写</button>
+						</div><!-- .card-group-footer -->
+					</div><!-- .collapsible-body -->
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<div class="card-group">
+				<div class="card">
+					<ul class="tabs">
+						<li class="tab"><a href="#tab1">申請（開設）者</a></li>
+						<li class="tab"><a href="#tab2">事業所等の所在地</a></li>
+						<li class="tab"><a href="#tab3">事業所・施設の種類</a></li>
+					</ul>
+				</div>
+				<div class="card" id="tab1">
+					<span class="card-title">
+						<h4>主たる事業所の所在地</h4>
+					</span>
+					<div class="card-content">
+						<div class="row">
+							<div class="input-item col xs12 sm6 md4 lg3">
+										<label>郵便番号</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="3" value="847" />
+											<span class="input-group-addon">-</span>
+											<input type="text" class="form-control" maxlength="4" value="0304" />
+											<span class="input-group-addon"><i class="material-icons">add</i></span>
+										</div><!-- .input-data -->
+							</div><!-- .input-item -->
+							<div class="input-item col xs12 sm9">
+										<label>住所１</label>
+										<div class="input-data">
+											<input type="text" class="form-control" maxlength="8" value="H27/05/22" />
+										</div><!-- .input-data -->
+							</div><!-- .input-item -->
+							<div class="input-item col xs12 sm6 md4 lg3">
+										<label>事業所番号</label>
+										<div class="input-data">
+											4190200412
+										</div><!-- .input-data -->
+							</div><!-- .input-item -->
+						</div><!-- .row -->
+					</div>
+				</div>
+				<div class="card" id="tab2">
+					<div class="card-content">
+						Card 2
+					</div>
+				</div>
+				<div class="card" id="tab3">
+					<div class="card-content">
+						Card 3
+					</div>
+				</div>
+			</div><!-- .card-group -->
+
+
+			<div style="height:200px;">&nbsp;</div>
+		</main>
+
+	</div><!-- #wrapper -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/common.js"></script>
+</body>
+</html>

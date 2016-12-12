@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>○○システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+		</header>
+
+		<nav class="nav-global">
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li><a href="#">メニュー</a></li>
+					<li class="current">カードサンプル</li>
+				</ul>
+
+				<h2>カードサンプル</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+		</nav>
+
+		<main class="main" id="top">
+
+			<!-- =========================================================== -->
+			<h2>シンプル カード</h2>
+
+			角丸と影があるだけのカードです。<br>
+			単体で使用する機会はないと思います。
+
+			<div class="card">
+				カードの内容
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>標準カード</h2>
+
+			パディングありのカードです。<br>
+			表示項目や入力項目、メッセージに使用します。
+
+			<div class="card">
+				<div class="card-content">
+					カードの内容
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>タイトル付きカード</h2>
+
+			タイトルありのカードです。<br>
+			サブグループ名に使用します。（例：メイングループ「申請者」の、サブグループ「住所情報」）
+
+			<div class="card">
+				<!-- カードのタイトル -->
+				<span class="card-title">
+					<h4>カードのタイトル</h4>
+				</span>
+
+				<!-- カードの内容 -->
+				<div class="card-content">
+					カードの内容
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>タイトル機能付きカード</h2>
+
+			タイトルの右端に、アイコンボタンによる機能を持たせるカードです。
+
+			<div class="card">
+				<!-- カードのタイトル -->
+				<span class="card-title">
+					<h4>カードのタイトル</h4>
+				</span>
+
+				<!-- アイコンボタン -->
+				<button class="btn-icon dropdown-button waves-effect waves-light" data-activates="card_more_01">
+					<i class="material-icons more">more_vert</i>
+				</button>
+				<!-- ドロップダウンリスト -->
+				<ul id="card_more_01" class="dropdown-content">
+					<li><a href="#">前回情報</a></li>
+					<li><a href="#">前回複写</a></li>
+					<li class="divider"></li>
+					<li><a href="#">追加情報</a></li>
+				</ul>
+
+				<!-- カードの内容 -->
+				<div class="card-content">
+					カードの内容
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>アクション機能付きカード</h2>
+
+			カードの下部に、アクション機能を持たせるカードです。<br>
+			通常はアンカーかボタンを配置します。
+
+			<div class="card">
+				<!-- カードのタイトル -->
+				<span class="card-title">
+					<h4>カードのタイトル</h4>
+				</span>
+
+				<!-- カードの内容 -->
+				<div class="card-content">
+					カードの内容
+				</div>
+
+				<!-- アクション機能 -->
+				<div class="card-action">
+					<button class="btn waves-effect waves-light">前回複写</button>
+					<button class="btn waves-effect waves-light">宛名参照</button>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>追加情報機能付きカード</h2>
+
+			追加情報機能を持たせるカードです。<br>
+			備考情報や前回情報などの表示に使用できます。
+
+			<div class="card">
+				<!-- カードのタイトル -->
+				<span class="card-title">
+					<h4>カードのタイトル</h4>
+				</span>
+
+				<!-- カードの内容 -->
+				<div class="card-content">
+					カードの内容
+				</div>
+
+				<!-- アクション機能 -->
+				<div class="card-action">
+					<div class="flex-spacer"></div>
+					<a class="activator">追加情報</a>
+				</div>
+
+				<!-- 追加情報機能 -->
+				<div class="card-reveal">
+					<!-- 追加情報のタイトル -->
+					<span class="card-title">
+						<h4>追加情報</h4>
+					</span>
+
+					<!-- アイコンボタン -->
+					<button class="card-title btn-icon waves-effect waves-light">
+						<i class="material-icons">close</i>
+					</button>
+
+					<!-- 追加情報の内容 -->
+					<div class="card-content">
+						カードの追加情報
+					</div>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>開閉機能付きカード</h2>
+
+			コンテンツの開閉機能を持たせるカードです。<br>
+			※タイトル機能と併用したら、うまく動作しません。。。 → 苦労したけど、なんとか動作しました！
+
+			<div class="card">
+				<!-- 開閉の定義 -->
+				<ul class="collapsible">
+					<li>
+						<!-- カードのタイトル。開閉させるためのヘッダー -->
+						<span class="card-title collapsible-header active">
+							<span class="icon-text">
+								<i class="material-icons">expand_less</i>
+								<h4>カードのタイトル</h4>
+							</span>
+						</span>
+
+						<!-- アイコンボタン -->
+						<button class="btn-icon dropdown-button waves-effect waves-light" data-activates="card_more_04">
+							<i class="material-icons more">more_vert</i>
+						</button>
+						<!-- ドロップダウンリスト -->
+						<ul id="card_more_04" class="dropdown-content">
+							<li><a href="#">前回情報</a></li>
+							<li><a href="#">前回複写</a></li>
+							<li class="divider"></li>
+							<li><a class="activator">追加情報</a></li>
+						</ul>
+
+						<!-- 開閉されるコンテンツ -->
+						<div class="collapsible-body">
+							<!-- カードの内容 -->
+							<div class="card-content">
+								カードの内容
+							</div>
+
+							<!-- アクション機能 -->
+							<div class="card-action">
+								<a href="#">前回情報</a>
+								<a href="#">前回複写</a>
+								<a class="activator">追加情報</a>
+								<div class="flex-spacer"></div>
+								<button class="btn waves-effect waves-light">前回情報</button>
+								<button class="btn waves-effect waves-light">前回複写</button>
+								<button class="btn waves-effect waves-light activator">追加情報</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- 追加情報機能 -->
+				<div class="card-reveal">
+					<!-- 追加情報のタイトル -->
+					<span class="card-title">
+						<h4>追加情報</h4>
+					</span>
+
+					<!-- アイコンボタン -->
+					<button class="card-title btn-icon waves-effect waves-light">
+						<i class="material-icons">close</i>
+					</button>
+
+					<!-- 追加情報の内容 -->
+					<div class="card-content">
+						カードの追加情報
+					</div>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>カードグループ</h2>
+
+			複数のカードをまとめて表示し、カード間の余白（マージン）が無くなります。<br>
+			児童１、児童２、…のように同種の情報を並べる場合に使えるかもしれません。<br>
+			この例では標準カードを３つ並べていますが、各機能付きのカードも使用できます。
+
+			<div class="card-group">
+				<!-- １つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容１
+					</div>
+				</div>
+
+				<!-- ２つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容２
+					</div>
+				</div>
+
+				<!-- ３つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容３
+					</div>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>カードグループのヘッダー・フッター</h2>
+
+			カードグループにはヘッダーやフッターを付けられます。<br>
+			ちなみに、カードが１つでも付けられます（笑）
+
+			<div class="card-group">
+				<!-- カードグループのヘッダー -->
+				<div class="card-group-header">
+					<h3>カードグループのヘッダー</h3>
+				</div>
+
+				<!-- １つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容１
+					</div>
+				</div>
+
+				<!-- ２つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容２
+					</div>
+				</div>
+
+				<!-- ３つ目の標準カード -->
+				<div class="card">
+					<div class="card-content">
+						カードの内容３
+					</div>
+				</div>
+
+				<!-- カードグループのフッター -->
+				<div class="card-group-footer">
+					<span>カードグループのフッター</span>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>開閉機能付きカードグループ</h2>
+
+			コンテンツの開閉機能を持たせるカードグループです。<br>
+			すべての子カードとフッターが開閉されます。
+
+			<!-- 開閉の定義 -->
+			<ul class="collapsible">
+				<!-- カードグループ -->
+				<li class="card-group">
+					<!-- カードグループのヘッダー。開閉させるためのヘッダー -->
+					<div class="card-group-header collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードグループのヘッダー</h3>
+					</div>
+
+					<!-- 開閉されるコンテンツ -->
+					<div class="collapsible-body">
+						<!-- １つ目の標準カード -->
+						<div class="card">
+							<div class="card-content">
+								カードの内容１
+							</div>
+						</div>
+
+						<!-- ２つ目の標準カード -->
+						<div class="card">
+							<div class="card-content">
+								カードの内容２
+							</div>
+						</div>
+
+						<!-- ３つ目の標準カード -->
+						<div class="card">
+							<div class="card-content">
+								カードの内容３
+							</div>
+						</div>
+
+						<!-- カードグループのフッター -->
+						<div class="card-group-footer">
+							<span>カードグループのフッター</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<!-- =========================================================== -->
+			<h2>カードの横並び</h2>
+
+			グリッドレイアウトを使用してカードを横並びにできます。<br>
+			カードグループも横並びにできます。<br>
+			変更前と変更後のような情報を表示する時に使えるんじゃないでしょうか？<br>
+			<br>
+			２列表示の例。
+
+			<div class="row">
+				<!-- １つ目の標準カード -->
+				<div class="col xs12 sm12 md6">
+					<div class="card">
+						<div class="card-content">
+							カードの内容１
+						</div>
+					</div>
+				</div>
+
+				<!-- ２つ目の標準カード -->
+				<div class="col xs12 sm12 md6">
+					<div class="card">
+						<div class="card-content">
+							カードの内容２
+						</div>
+					</div>
+				</div>
+			</div>
+
+			３列表示の例。
+
+			<div class="row">
+				<!-- １つ目の標準カード -->
+				<div class="col xs12 sm12 md4">
+					<div class="card">
+						<div class="card-content">
+							カードの内容１
+						</div>
+					</div>
+				</div>
+
+				<!-- ２つ目の標準カード -->
+				<div class="col xs12 sm12 md4">
+					<div class="card">
+						<div class="card-content">
+							カードの内容２
+						</div>
+					</div>
+				</div>
+
+				<!-- ３つ目の標準カード -->
+				<div class="col xs12 sm12 md4">
+					<div class="card">
+						<div class="card-content">
+							カードの内容３
+						</div>
+					</div>
+				</div>
+			</div>
+
+			４列表示の例。
+
+			<div class="row">
+				<!-- １つ目の標準カード -->
+				<div class="col xs12 sm12 md3">
+					<div class="card">
+						<div class="card-content">
+							カードの内容１
+						</div>
+					</div>
+				</div>
+
+				<!-- ２つ目の標準カード -->
+				<div class="col xs12 sm12 md3">
+					<div class="card">
+						<div class="card-content">
+							カードの内容２
+						</div>
+					</div>
+				</div>
+
+				<!-- ３つ目の標準カード -->
+				<div class="col xs12 sm12 md3">
+					<div class="card">
+						<div class="card-content">
+							カードの内容３
+						</div>
+					</div>
+				</div>
+
+				<!-- ４つ目の標準カード -->
+				<div class="col xs12 sm12 md3">
+					<div class="card">
+						<div class="card-content">
+							カードの内容４
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- =========================================================== -->
+			<h2>カードの色</h2>
+
+			カードの色を指定できます。<br>
+			「標準（default）」「プライマリー（primary）」「成功（success）」「情報（info）」「警告（warning）」「危険（danger）」の６パターンが使用できます。
+			<br>
+			標準の色の例
+
+			<div class="card">
+				<div class="card-content">
+					default カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			プライマリー色の例
+
+			<div class="card card-primary">
+				<div class="card-content">
+					primary カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			成功色の例
+
+			<div class="card card-success">
+				<div class="card-content">
+					success カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			情報色の例
+
+			<div class="card card-info">
+				<div class="card-content">
+					info カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			警告色の例
+
+			<div class="card card-warning">
+				<div class="card-content">
+					warning カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			危険色の例
+
+			<div class="card card-danger">
+				<div class="card-content">
+					danger カラー
+				</div><!-- .card-content -->
+			</div><!-- .card -->
+
+			<!-- =========================================================== -->
+			<h2>カードグループの色</h2>
+
+			カードグループの場合は、ヘッダー、フッターそれぞれに色を指定できます。<br>
+			この例では、色相を合わせた６パターンとしていますが、ヘッダー、フッター、カードに別の色を指定できます。<br>
+			<br>
+			<!-- =========================================================================== -->
+			標準の色の例
+
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_51">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_51" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											default カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer">
+							<button class="btn waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<!-- =========================================================================== -->
+			プライマリー色の例
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header card-primary collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card card-primary">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_52">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_52" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											primary カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn btn-primary waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="link-primary activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer card-primary">
+							<button class="btn btn-primary waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<!-- =========================================================================== -->
+			成功色の例
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header card-success collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card card-success">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_53">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_53" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											success カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn btn-success waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="link-success activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer card-success">
+							<button class="btn btn-success waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<!-- =========================================================================== -->
+			情報色の例
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header card-info collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card card-info">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_54">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_54" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											info カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn btn-info waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="link-info activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer card-info">
+							<button class="btn btn-info waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<!-- =========================================================================== -->
+			警告色の例
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header card-warning collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card card-warning">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_55">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_55" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											warning カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn btn-warning waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="link-warning activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer card-warning">
+							<button class="btn btn-warning waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+			<!-- =========================================================================== -->
+			危険色の例
+			<ul class="collapsible">
+
+				<!-- カードグループ -->
+				<li class="card-group">
+
+					<!-- カードヘッダー -->
+					<div class="card-group-header card-danger collapsible-header active">
+						<i class="material-icons">expand_less</i>
+						<h3>カードヘッダー</h3>
+					</div><!-- .card-group-header -->
+
+					<div class="collapsible-body">
+
+						<!-- カード -->
+						<div class="card card-danger">
+
+							<ul class="collapsible">
+								<li>
+
+									<!-- カードタイトル -->
+									<span class="card-title collapsible-header active">
+										<span class="icon-text">
+											<i class="material-icons">expand_less</i>
+											<h4>カードタイトル</h4>
+										</span>
+									</span><!-- .card-title -->
+
+									<!-- カードタイトル機能 -->
+									<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_56">
+										<i class="material-icons more">more_vert</i>
+									</button><!-- .dropdown-button -->
+									<ul id="card_more_56" class="dropdown-content">
+										<li><a href="#">ドロップダウン１</a></li>
+										<li><a href="#">ドロップダウン２</a></li>
+									</ul><!-- .dropdown-content -->
+
+									<div class="collapsible-body">
+
+										<!-- カードコンテンツ -->
+										<div class="card-content">
+											danger カラー
+										</div><!-- .card-content -->
+
+										<div class="card-action">
+											<button class="btn btn-danger waves-effect waves-light">アクションボタン</button>
+											<div class="flex-spacer"></div>
+											<a class="link-danger activator">追加情報</a>
+										</div><!-- .card-action -->
+
+									</div><!-- .collapsible-body -->
+
+								</li>
+							</ul><!-- .collapsible -->
+
+							<div class="card-reveal">
+
+								<!-- カードタイトル -->
+								<span class="card-title">
+									<h4>追加情報</h4>
+								</span><!-- .card-title -->
+
+								<button class="card-title btn-icon waves-effect waves-light">
+									<i class="material-icons">close</i>
+								</button>
+
+								<div class="card-content">
+									カードの追加情報
+								</div><!-- .card-content -->
+
+							</div><!-- .card-reveal -->
+
+						</div><!-- .card -->
+
+						<div class="card-group-footer card-danger">
+							<button class="btn btn-danger waves-effect waves-light">フッターボタン</button>
+						</div><!-- .card-group-footer -->
+
+					</div><!-- .collapsible-body -->
+
+				</li><!-- .card-group -->
+			</ul><!-- .collapsible -->
+
+
+
+
+
+
+
+
+
+			<!-- =========================================================== -->
+			<hr style="margin:100px 0;">
+
+			以上を踏まえてサンプル。<br>
+			カードのすべての機能を使用しているので、HTML はかなり複雑になっています。。。
+			<div class="row">
+
+				<div class="col xs12 sm12 md6">
+					<ul class="collapsible">
+						<li class="card-group">
+							<div class="card-group-header card-primary collapsible-header active">
+								<i class="material-icons">expand_less</i>
+								<h3>児童情報（変更後）</h3>
+							</div>
+							<div class="collapsible-body">
+
+								<div class="card">
+									<ul class="collapsible">
+										<li>
+											<span class="card-title collapsible-header active">
+												<span class="icon-text">
+													<i class="material-icons">expand_less</i>
+													<h4>児童１</h4>
+												</span>
+											</span>
+											<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_11">
+												<i class="material-icons more">more_vert</i>
+											</button>
+											<ul id="card_more_11" class="dropdown-content">
+												<li><a href="#">前回複写</a></li>
+												<li class="divider"></li>
+												<li><a class="activator">追加情報</a></li>
+											</ul>
+											<div class="collapsible-body">
+												<div class="card-content">
+													<div class="row">
+														<div class="input-item col xs12 sm6">
+															<label>貸付決定番号</label>
+															<div class="input-data">
+																<input type="text" class="form-control" maxlength="10" value="" />
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>母寡区分</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">母子福祉資金</option>
+																	<option value="2">父子福祉資金</option>
+																</select>
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>資金種別</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">修学資金（高校・公立・一般）</option>
+																</select>
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>氏名</label>
+															<div class="input-data">
+																<input type="text" class="form-control" maxlength="10" value="" />
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>ふくしじむ</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">福祉事務所０１</option>
+																	<option value="1">福祉事務所０２</option>
+																	<option value="1">福祉事務所０３</option>
+																</select>
+															</div>
+														</div>
+													</div><!-- class="row" -->
+												</div>
+												<div class="card-action">
+													<button class="btn btn-primary waves-effect waves-light">前回複写</button>
+													<div class="flex-spacer"></div>
+													<a class="activator">追加情報</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-reveal">
+										<span class="card-title">
+											<h4>追加情報</h4>
+										</span>
+										<button class="card-title btn-icon waves-effect waves-light">
+											<i class="material-icons">close</i>
+										</button>
+										<div class="card-content">
+											カードの追加情報
+										</div>
+									</div>
+								</div>
+
+								<div class="card">
+									<ul class="collapsible">
+										<li>
+											<span class="card-title collapsible-header active">
+												<span class="icon-text">
+													<i class="material-icons">expand_less</i>
+													<h4>児童２</h4>
+												</span>
+											</span>
+											<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_12">
+												<i class="material-icons more">more_vert</i>
+											</button>
+											<ul id="card_more_12" class="dropdown-content">
+												<li><a href="#">前回複写</a></li>
+												<li class="divider"></li>
+												<li><a class="activator">追加情報</a></li>
+											</ul>
+											<div class="collapsible-body">
+												<div class="card-content">
+													<div class="row">
+														<div class="input-item col xs12 sm6">
+															<label>貸付決定番号</label>
+															<div class="input-data">
+																<input type="text" class="form-control" maxlength="10" value="" />
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>母寡区分</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">母子福祉資金</option>
+																	<option value="2">父子福祉資金</option>
+																</select>
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>資金種別</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">修学資金（高校・公立・一般）</option>
+																</select>
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>氏名</label>
+															<div class="input-data">
+																<input type="text" class="form-control" maxlength="10" value="" />
+															</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>ふくしじむ</label>
+															<div class="input-data">
+																<select class="form-control">
+																	<option value="" >&nbsp;</option>
+																	<option value="1">福祉事務所０１</option>
+																	<option value="1">福祉事務所０２</option>
+																	<option value="1">福祉事務所０３</option>
+																</select>
+															</div>
+														</div>
+													</div><!-- class="row" -->
+												</div>
+												<div class="card-action">
+													<button class="btn btn-primary waves-effect waves-light">前回複写</button>
+													<div class="flex-spacer"></div>
+													<a class="activator">追加情報</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-reveal">
+										<span class="card-title">
+											<h4>追加情報</h4>
+										</span>
+										<button class="card-title btn-icon waves-effect waves-light">
+											<i class="material-icons">close</i>
+										</button>
+										<div class="card-content">
+											カードの追加情報
+										</div>
+									</div>
+								</div>
+
+								<div class="card-group-footer">
+									<button class="btn btn-primary waves-effect waves-light">児童追加</button>
+									<button class="btn btn-primary waves-effect waves-light">児童削除</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col xs12 sm12 md6">
+					<ul class="collapsible">
+						<li class="card-group">
+							<div class="card-group-header collapsible-header active">
+								<i class="material-icons">expand_less</i>
+								<h3>児童情報（変更前）</h3>
+							</div>
+							<div class="collapsible-body">
+
+								<div class="card">
+									<ul class="collapsible">
+										<li>
+											<span class="card-title collapsible-header active">
+												<span class="icon-text">
+													<i class="material-icons">expand_less</i>
+													<h4>児童１</h4>
+												</span>
+											</span>
+											<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_21">
+												<i class="material-icons more">more_vert</i>
+											</button>
+											<ul id="card_more_21" class="dropdown-content">
+												<li><a class="activator">追加情報</a></li>
+											</ul>
+											<div class="collapsible-body">
+												<div class="card-content">
+													<div class="row">
+														<div class="input-item col xs12 sm6">
+															<label>貸付決定番号</label>
+															<div class="input-data">120160302000001</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>母寡区分</label>
+															<div class="input-data">母子福祉資金</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>資金種別</label>
+															<div class="input-data">修学資金（高校・公立・一般）</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>氏名</label>
+															<div class="input-data">電算 000000000000002</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>ふくしじむ</label>
+															<div class="input-data">福祉事務所０１</select>
+															</div>
+														</div>
+													</div><!-- class="row" -->
+												</div>
+												<div class="card-action">
+													<div class="flex-spacer"></div>
+													<a class="activator">追加情報</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-reveal">
+										<span class="card-title">
+											<h4>追加情報</h4>
+										</span>
+										<button class="card-title btn-icon waves-effect waves-light">
+											<i class="material-icons">close</i>
+										</button>
+										<div class="card-content">
+											カードの追加情報
+										</div>
+									</div>
+								</div>
+
+								<div class="card">
+									<ul class="collapsible">
+										<li>
+											<span class="card-title collapsible-header active">
+												<span class="icon-text">
+													<i class="material-icons">expand_less</i>
+													<h4>児童２</h4>
+												</span>
+											</span>
+											<button class="dropdown-button btn-icon waves-effect waves-light" data-activates="card_more_22">
+												<i class="material-icons more">more_vert</i>
+											</button>
+											<ul id="card_more_22" class="dropdown-content">
+												<li><a class="activator">追加情報</a></li>
+											</ul>
+											<div class="collapsible-body">
+												<div class="card-content">
+													<div class="row">
+														<div class="input-item col xs12 sm6">
+															<label>貸付決定番号</label>
+															<div class="input-data">120160302000001</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>母寡区分</label>
+															<div class="input-data">母子福祉資金</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>資金種別</label>
+															<div class="input-data">修学資金（高校・公立・一般）</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>氏名</label>
+															<div class="input-data">電算 000000000000002</div>
+														</div>
+														<div class="input-item col xs12 sm6">
+															<label>ふくしじむ</label>
+															<div class="input-data">福祉事務所０１</select>
+															</div>
+														</div>
+													</div><!-- class="row" -->
+												</div>
+												<div class="card-action">
+													<div class="flex-spacer"></div>
+													<a class="activator">追加情報</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-reveal">
+										<span class="card-title">
+											<h4>追加情報</h4>
+										</span>
+										<button class="card-title btn-icon waves-effect waves-light">
+											<i class="material-icons">close</i>
+										</button>
+										<div class="card-content">
+											カードの追加情報
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div style="height:200px;">&nbsp;</div>
+		</main>
+
+		<div id="bottom"></div>
+
+	</div><!-- id="wrapper" -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/common.js"></script>
+</body>
+</html>

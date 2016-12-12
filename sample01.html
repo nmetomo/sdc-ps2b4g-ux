@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>母子父子寡婦福祉資金システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+			<h1>母子父子寡婦福祉資金システム<span>UI 改善バージョン</span></h1>
+			<ul class="header-info">
+				<li><i class="material-icons">access_time</i>平成28年7月1日 9:00</li>
+				<li><i class="material-icons">person</i>梅崎 智宏</li>
+				<li><i class="material-icons">power_settings_new</i>ログアウト</li>
+			</ul>
+		</header>
+
+		<nav class="nav-global">
+			<ul>
+				<li>
+					<a href="#nav-global-tab0">TOP</a>
+				</li>
+				<li>
+					<a href="#nav-global-tab1" class="dropdown-button" data-activates="nav-global-tab1">1.申請受付</a>
+					<ul id="nav-global-tab1" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!" class="tooltipped" data-tooltip="貸付申請者の一覧表を表示します。"><i class="material-icons">list</i>貸付申請者一覧</a></li>
+								<li><a href="#!" class="tooltipped" data-tooltip="貸付申請書を入力します。"><i class="material-icons">mode_edit</i>貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>償還計画シミュレーション</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">search</i>個別宛名検索・結果一覧</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>個別宛名管理</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab2" class="dropdown-button" data-activates="nav-global-tab2">2.選考決定</a>
+					<ul id="nav-global-tab2" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">print</i>貸付選考表作成</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>貸付者採用登録処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>貸付決定者一覧</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab3" class="dropdown-button" data-activates="nav-global-tab3">3.貸付台帳</a>
+					<ul id="nav-global-tab3" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">search</i>貸付者検索</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付者基本情報入力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>貸付処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>証明書提出状況一覧</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付停止入力</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>返納金管理</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付計画変更入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還計画変更入力</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（貸付関連）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="active">
+					<a href="#nav-global-tab4" class="dropdown-button" data-activates="nav-global-tab4" class="active">4.諸届等入力</a>
+					<ul id="nav-global-tab4" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>休学・復学届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>増額貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>辞退・減額申出書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>貸付期間延長申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>継続貸付申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>据置期間延長申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>支払猶予申請書入力</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還免除申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>違約金免除申請書入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>償還方法変更入力</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>住所・氏名変更届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>死亡届入力</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>口座番号変更届入力</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">print</i>受付処理簿作成</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>諸届等決裁状況一覧</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab5" class="dropdown-button" data-activates="nav-global-tab5">5.調定処理</a>
+					<ul id="nav-global-tab5" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">payment</i>償還金調定処理</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>口座振替データ作成</a></li>
+								<li><a href="#!"><i class="material-icons">payment</i>違約金調定処理</a></li>
+								<li><a href="#!"><i class="material-icons">mode_edit</i>滞納分口座振替計画入力</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（調定関連）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab6" class="dropdown-button" data-activates="nav-global-tab6">6.収納滞納</a>
+					<ul id="nav-global-tab6" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">payment</i>収納消込処理</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>収納消込データ一覧</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>口座振替結果データ登録</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>督促処理</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>催告処理</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>分納納付書作成</a></li>
+								<li><a href="#!"><i class="material-icons">search</i>滞納状況検索</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>未収記事一覧</a></li>
+								<li><a href="#!"><i class="material-icons">list</i>還付・充当一覧</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>帳票作成処理（収納・滞納）</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab7" class="dropdown-button" data-activates="nav-global-tab7">7.年次統計</a>
+					<ul id="nav-global-tab7" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>年次処理</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>厚生労働省報告書作成</a></li>
+								<li><a href="#!"><i class="material-icons">print</i>汎用帳票作成</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nav-global-tab8" class="dropdown-button" data-activates="nav-global-tab8">8.マスタ保守</a>
+					<ul id="nav-global-tab8" class="dropdown-content">
+						<li class="nav-global-content">
+							<ul>
+								<li><a href="#!" class="tooltipped" data-position="bottom" data-html="true" data-tooltip="システム利用者の<b>パスワード</b>を変更します。"><i class="material-icons">https</i>利用者パスワード変更</a></li>
+								<li><a href="#!"><i class="material-icons">supervisor_account</i>利用権限グループ設定</a></li>
+								<li><a href="#!"><i class="material-icons">security</i>利用者別権限設定</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>各種コード保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>郵便番号データ取込み</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>市町村コード変更</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>金融機関マスタ保守</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ＳＱＬ実行</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ファイルアップロード</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>操作ヘルプ内容保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>ログデータ出力</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>サーバログ確認</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>学校マスタ保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>委託者マスタ保守</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>資金利率等設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>修学･修業･就学支度限度額設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>連帯保証人基準設定</a></li>
+								<li class="divider"></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定（滞納期間）</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>滞納ランク基準設定（滞納率）</a></li>
+							</ul>
+							<ul>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>統合宛名連携ファイル作成</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>統合宛名連携管理</a></li>
+								<li><a href="#!"><i class="material-icons">chevron_right</i>名寄データ・個人番号一括取込</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="disabled">
+					<a href="#nav-global-tab9">9.予備</a>
+				</li>
+			</ul>
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li><a href="#">メニュー</a></li>
+					<li><a href="#">貸付者基本情報</a></li>
+					<li class="current">増額貸付申請書入力</li>
+				</ul>
+
+				<h2>増額貸付申請書入力</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-link-pay"   class="btn btn-default waves-effect waves-red">
+					支払一覧
+				</button>
+				<button id="menu-link-tokki" class="btn btn-default waves-effect waves-orange">
+					特記事項
+				</button>
+				<button id="menu-link-file"  class="btn btn-default waves-effect waves-green">
+					ファイル添付
+					<span class="badge">9</span>
+				</button>
+
+				<button id="page-history-btn" class="dropdown-button btn-icon waves-effect waves-light" data-activates="page-history-list">
+					<i class="material-icons">swap_horiz</i>
+				</button>
+
+				<ul id="page-history-list" class="dropdown-content">
+					<li style="display:inline-block">
+						<span>
+							<ul class="pagination">
+								<li disabled="disabled"><a href="#" aria-label="前のページへ">
+										<span aria-hidden="true">«</span>
+									</a>
+								</li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li>
+									<a href="#" aria-label="次のページへ">
+										<span aria-hidden="true">»</span>
+									</a>
+								</li>
+							</ul>
+						</span>
+					</li>
+				</ul>
+
+				<button id="page-scroll-btn" class="dropdown-button btn-icon waves-effect waves-light" data-activates="page-scroll-list">
+					<i class="material-icons">swap_vert</i>
+				</button>
+
+				<ul id="page-scroll-list" class="dropdown-content">
+					<li><a href="#top"       class="scroll">ページ最上部</a></li>
+					<li class="divider"></li>
+					<li><a href="#hoge-info" class="scroll">○○××情報</a></li>
+					<li><a href="#old-kashi" class="scroll">現在までの貸付内容</a></li>
+					<li><a href="#new-kashi" class="scroll">新しい貸付内容</a></li>
+					<li><a href="#zougaku"   class="scroll">増額決定内容</a></li>
+					<li class="divider"></li>
+					<li><a href="#bottom"    class="scroll">ページ最下部</a></li>
+				</ul>
+
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+
+		</nav>
+
+		<main class="main" id="top">
+
+			<div id="effect" class="page-list">
+				<div class="page-count">5 件</div>
+				<ul class="pagination">
+					<li class="disabled">
+						<a href="#" aria-label="前のページへ">
+							<span aria-hidden="true">«</span>
+						</a>
+					</li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+						<a href="#" aria-label="次のページへ">
+							<span aria-hidden="true">»</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div class="col sm12">
+
+					<ul id="hoge-info" class="panel panel-primary collapsible">
+						<li>
+
+							<div class="panel-header collapsible-header active">
+								<h3 class="panel-title">○○情報</h3>
+							</div><!-- class="panel-header" -->
+
+							<div class="panel-body collapsible-body">
+
+								<div class="input-container">
+
+
+
+									<div class="row">
+										<div class="input-item col xs12 sm6 md4 lg3">
+											<label>貸付決定番号</label>
+											<div class="input-data">120160302000001</div>
+										</div>
+										<div class="input-item col xs12 sm6 md4 lg3">
+											<label>母寡区分</label>
+											<div class="input-data">母子福祉資金</div>
+										</div>
+										<div class="input-item col xs12 sm6 md4 lg3">
+											<label>資金種別</label>
+											<div class="input-data">修学資金（高校・公立・一般）</div>
+										</div>
+										<div class="input-item col xs12 sm6 md4 lg3">
+											<label>氏名</label>
+											<div class="input-data">電算 000000000000002</div>
+										</div>
+										<div class="input-item col xs12 sm6 md4 lg3">
+											<label>ふくしじむ</label>
+											<div class="input-data">福祉事務所０１</div>
+										</div>
+									</div><!-- class="row" -->
+
+								</div><!-- class="input-container" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</div><!-- class="panel-body" -->
+
+						</li>
+					</ul><!-- class="panel" -->
+
+				</div><!-- class="col" -->
+			</div><!-- class="row" -->
+
+
+			<ul id="old-kashi" class="panel panel-primary collapsible">
+				<li>
+					<div class="panel-header collapsible-header active">
+						<h3 class="panel-title">現在までの貸付内容</h3>
+					</div>
+					<div class="panel-body collapsible-body">
+						<div class="input-container">
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4 lg3">
+									<label>貸付金額</label>
+									<div class="input-data">340,000 円</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4 lg3">
+									<label>貸付月額</label>
+									<div class="input-data">10,000 円</div>
+								</div>
+								<div class="input-item col xs12 sm6">
+									<label>貸付期間</label>
+									<div class="input-data">H28/04 ～ H31/03</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4 lg3 offset-lg3">
+									<label>貸付済額</label>
+									<div class="input-data">0 円</div>
+								</div>
+								<div class="input-item col xs12 sm6">
+									<label>貸付決定年月日</label>
+									<div class="input-data">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<ul id="new-kashi" class="panel panel-primary collapsible">
+				<li>
+					<div class="panel-header collapsible-header active">
+						<h3 class="panel-title">新しい貸付内容</h3>
+					</div>
+					<div class="panel-body collapsible-body">
+						<div class="input-container">
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4 lg3">
+									<label>貸付金額</label>
+									<div class="input-data">円</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4 lg3">
+									<label>貸付月額</label>
+									<div class="input-data">円</div>
+								</div>
+								<div class="input-item col xs12 sm6">
+									<label>貸付期間</label>
+									<div class="input-data">～</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4 lg3 offset-lg3">
+									<label>貸付済額</label>
+									<div class="input-data">円</div>
+								</div>
+								<div class="input-item col xs12 sm6">
+									<label>貸付決定年月日</label>
+									<div class="input-data">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<ul id="zougaku" class="panel panel-primary collapsible">
+				<li>
+					<div class="panel-header collapsible-header active">
+						<h3 class="panel-title">増額決定内容</h3>
+					</div>
+					<div class="panel-body collapsible-body">
+						<div class="input-container">
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4">
+									<label>申請年月日 <span class="required">必須</span></label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text"   name="txtSinYmd" class="form-control hissu" maxlength="8" value="H28/08/18" />
+											<span class="input-group-addon"><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+										</div>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4">
+									<label>受付番号</label>
+									<div class="input-data">
+										<input type="text" name="txtUketukeNo" class="form-control" maxlength="8" value="" placeholder="半角数字で入力して下さい" />
+										<span class="input-help">半角数字以外が入力されています。</span>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4">
+									<label>受付年月日</label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text" name="txtUketukeYmd" class="form-control" maxlength="8" value="" readonly="readonly" />
+											<span class="input-group-addon"><input type="button" name="btnSinYmd" class="cal-btn" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4">
+									<label>増額する金額</label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text" name="txtZouKin" class="form-control" value="" />
+											<span class="input-group-addon">円</span>
+										</div>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4">
+									<label>増額後の月額</label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text" name="txtZouGetu" class="form-control" value="" maxlength="8" />
+											<span class="input-group-addon">円</span>
+										</div>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6 md4">
+									<label>増額期間</label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text" name="txtZouStart" class="form-control" maxlength="6" value="" />
+											<span class="input-group-addon">分から</span>
+											<span class="input-group-addon"><input type="button" name="btnCalendar" class="cal-btn" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12">
+									<label>申請理由</label>
+									<div class="input-data">
+										<textarea name="txtReason" rows="3" cols="120" class="form-control"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12 sm6">
+									<label>処理状況（ラジオボタンバージョン）</label>
+									<div class="input-data">
+										<span>
+											<input type="radio" name="rdoSyori" id="test01" value="0" checked="checked" />
+											<label for="test01">決裁中</label>
+										</span>
+										<span>
+											<input type="radio" name="rdoSyori" id="test02" value="1" class="with-gap" />
+											<label for="test02">承認済</label>
+										</span>
+										<span>
+											<input type="radio" name="rdoSyori" id="test03" value="2" class="with-gap" disabled="disabled" />
+											<label for="test03">不承認</label>
+										</span>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6">
+									<label>処理状況（チェックボックスバージョン）</label>
+									<div class="input-data">
+										<span>
+											<input type="checkbox" id="test11" value="10" checked="checked" />
+											<label for="test11">決裁中</label>
+										</span>
+										<span>
+											<input type="checkbox" id="test12" value="11" class="filled-in" />
+											<label for="test12">承認済</label>
+										</span>
+										<span>
+											<input type="checkbox" id="test13" value="12" class="filled-in" disabled="disabled" />
+											<label for="test13">不承認</label>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12">
+									<label>不承認理由</label>
+									<div class="input-data">
+										<textarea name="txtFusyouninRiyu" rows="3" cols="120" class="form-control" disabled="disabled" ></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-item col xs12 sm6 md4">
+									<label>はっこうび</label>
+									<div class="input-data">
+										<div class="input-group">
+											<input type="text" name="txtTutisyoYmd" class="form-control" maxlength="8" value="H28/07/05" readonly="readonly"  disabled="disabled" />
+											<span class="input-group-addon"><input type="button" name="btnTutisyoYmd" class="cal-btn" disabled="disabled" /></span>
+										</div>
+									</div>
+								</div>
+								<div class="input-item col xs12 sm6 md8">
+									<label>ぶんしょ</label>
+									<div class="input-data">
+										<input type="text" name="txtDocNo" class="form-control" maxlength="7" value="" disabled="disabled" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<!-- Modal Trigger -->
+			<button class="btn btn-primary modal-trigger waves-effect waves-light" data-target="modal1">確認</button>
+
+			<!-- Modal Structure -->
+			<div id="modal1" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4>確認メッセージ</h4>
+					<p>入力したデータを登録します。</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default modal-action modal-close waves-effect waves-red">キャンセル</button>
+					<button class="btn btn-primary modal-action modal-close waves-effect waves-light">OK</button>
+				</div>
+			</div>
+
+			<div class="fixed-action-btn horizontal click-to-toggle">
+				<a class="btn-floating btn-large red"><i class="large material-icons">mode_edit</i></a>
+				<ul>
+					<li><a class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+					<li><a class="btn-floating"><i class="material-icons">format_quote</i></a></li>
+					<li><a class="btn-floating"><i class="material-icons">publish</i></a></li>
+					<li><a class="btn-floating"><i class="material-icons">attach_file</i></a></li>
+				</ul>
+			</div>
+
+<!---
+			<div class="row">
+				<div class="col sm1">sm1-1</div>
+				<div class="col sm1">sm1-2</div>
+				<div class="col sm1">sm1-3</div>
+				<div class="col sm1">sm1-4<br>*****</div>
+				<div class="col sm1">sm1-5</div>
+				<div class="col sm1">sm1-6</div>
+				<div class="col sm1">sm1-7</div>
+				<div class="col sm1">sm1-8</div>
+				<div class="col sm1">sm1-9</div>
+				<div class="col sm1">sm1-10</div>
+				<div class="col sm1">sm1-11</div>
+				<div class="col sm1">sm1-12</div>
+				<div class="col sm1">sm1-13</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm12">sm12</div>
+				<div class="col sm6">sm6<br>*****</div>
+				<div class="col sm6">sm6</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm12">sm12</div>
+				<div class="col sm6 offset-sm6">s6 offset-sm6</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm7 push-sm5">1 : sm7 push-sm5<br>*****</div>
+				<div class="col sm5 pull-sm7">2 : sm5 pull-sm7</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm12">sm12</div>
+				<div class="col sm12 md6">s12 md6</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm12">sm12></div>
+				<div class="col sm12 md4 lg2">sm12 md4 lg2</div>
+				<div class="col sm12 md4 lg8">sm12 md4 lg8</div>
+				<div class="col sm12 md4 lg2">sm12 md4 lg2<br>*****</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col sm12 md6 lg3">sm12 md6 lg3</div>
+				<div class="col sm12 md6 lg3">sm12 md6 lg3</div>
+				<div class="col sm12 md6 lg3">sm12 md6 lg3</div>
+				<div class="col sm12 md6 lg3">sm12 md6 lg3</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col xs12 sm6 md4 lg3 xl2">1</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">2</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">3</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">4</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">5</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">6</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">7</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">8</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">9</div>
+				<div class="col xs12 sm6 md4 lg3 xl2">10</div>
+			</div>
+-->
+
+
+		</main>
+
+		<div id="bottom"></div>
+
+	</div><!-- id="wrapper" -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/common.js"></script>
+</body>
+</html>

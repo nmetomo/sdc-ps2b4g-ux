@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>○○システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+		</header>
+
+		<nav class="nav-global">
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li><a href="#">メニュー</a></li>
+					<li class="current">カードサンプル</li>
+				</ul>
+
+				<h2>タブサンプル</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+		</nav>
+
+		<main class="main" id="top">
+
+			<!-- Materialize のサンプルのまま
+			<div class="row">
+				<div class="col xs12">
+					<ul class="tabs">
+						<li class="tab col xs3"         ><a                href="#test11">Test 1</a></li>
+						<li class="tab col xs3"         ><a class="active" href="#test12">Test 2</a></li>
+						<li class="tab col xs3 disabled"><a                href="#test13">Disabled Tab</a></li>
+						<li class="tab col xs3"         ><a                href="#test14">Test 4</a></li>
+					</ul>
+				</div>
+				<div id="test11" class="col xs12">Test 1</div>
+				<div id="test12" class="col xs12">Test 2</div>
+				<div id="test13" class="col xs12">Test 3</div>
+				<div id="test14" class="col xs12">Test 4</div>
+			</div>
+			-->
+
+			<!-- タブカードとコンテンツカードの境界を無くすため、カードグループを使用する -->
+			<div class="card-group">
+
+				<!-- タブ用のカード -->
+				<div class="card">
+					<!-- タブ用のリスト -->
+					<div class="row">
+						<div class="col xs12">
+							<ul class="tabs">
+								<!--
+								・アクティブタブは、アンカータグに「active」クラスを定義する。
+								・無効タブは、リストタグに「disabled」クラスを定義する。
+								-->
+								<li class="tab col xs3"         ><a                href="#test1">Test 1</a></li>
+								<li class="tab col xs3"         ><a                href="#test2">Test 2</a></li>
+								<li class="tab col xs3 disabled"><a                href="#test3">Disabled Tab</a></li>
+								<li class="tab col xs3"         ><a class="active" href="#test4">Test 4</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- タブ１用のカード  ※必要なのは、タブのアンカーで定義した名称の ID -->
+				<div class="card" id="test1">
+					<div class="card-content">
+						Card 1
+					</div>
+				</div>
+
+				<!-- タブ２用のカード  ※必要なのは、タブのアンカーで定義した名称の ID -->
+				<div class="card" id="test2">
+					<div class="card-content">
+						Card 2
+					</div>
+				</div>
+
+				<!-- タブ３用のカード  ※必要なのは、タブのアンカーで定義した名称の ID -->
+				<div class="card" id="test3">
+					<div class="card-content">
+						Card 3
+					</div>
+				</div>
+
+				<!-- タブ４用のカード  ※必要なのは、タブのアンカーで定義した名称の ID -->
+				<div class="card" id="test4">
+					<div class="card-content">
+						Card 4
+					</div>
+				</div>
+
+			</div><!-- .card-group -->
+
+
+			<div style="height:200px;">&nbsp;</div>
+		</main>
+
+	</div><!-- #wrapper -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>○○システム</title>
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/common.css">
+	<link rel="stylesheet" href="./style/bootstrap-datepicker.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<header>
+		</header>
+
+		<nav class="nav-global">
+		</nav>
+
+		<nav class="nav-local">
+			<div class="menu-name">
+				<ul class="breadcrumb">
+					<li><a href="#">ホーム</a></li>
+					<li class="current">Bootstrap Datepicker</li>
+				</ul>
+
+				<h2>Bootstrap Datepicker</h2>
+			</div>
+
+			<div class="menu-button">
+				<button id="menu-help" class="btn-icon waves-effect waves-light">
+					<i class="material-icons">help</i>
+				</button>
+			</div>
+		</nav>
+
+		<main class="main" id="top">
+
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+
+						<div class="input-item col xs12 sm6 md4 lg3">
+							<label>最低限のオプションを指定</label>
+							<div id="date-sample01" class="input-data date">
+								<input type="text" class="form-control" value="" />
+								<span class="input-group-addon"><button class="cal-btn"></button></span>
+							</div>
+						</div>
+
+						<div class="input-item col xs12 sm6 md4 lg3">
+							<label>すべてのオプションを指定</label>
+							<div id="date-sample02" class="input-data date">
+								<input type="text" class="form-control" value="2016/02/15" />
+								<span class="input-group-addon"><button class="cal-btn"></button></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div style="height:200px;">&nbsp;</div>
+		</main>
+
+	</div><!-- #wrapper -->
+
+	<script src="./script/jquery-3.1.0.min.js"></script>
+	<script src="./script/jquery-ui.min.js"></script>
+	<script src="./script/materialize.min.js"></script>
+	<script src="./script/bootstrap-datepicker.js"></script>
+	<script src="./script/bootstrap-datepicker.ja.js"></script>
+	<script src="./script/common.js"></script>
+	<script type="text/javascript">
+		/*
+		 * Datepicker
+		 **/
+		$( function() {
+
+			// 最低限のオプションを指定
+			// ※フレームワークの初期値を変更したので、オプション指定無しで標準の動作
+			$('#date-sample01.input-data.date').datepicker();
+
+			// すべてのオプションを指定
+			$('#date-sample02.input-data.date').datepicker({
+
+				// 日付が選択された時に閉じる
+				autoclose: false,
+
+				// 日付をパラメーターとした関数（日表示の場合）
+				beforeShowDay: function (date){
+					// 今月の…
+					if (date.getMonth() == (new Date()).getMonth())
+						switch (date.getDate()){
+							// ４日にツールチップとクラスを設定
+							// ※なにか起点となる日付に使えるんじゃない？
+							case 4:
+								return {
+									tooltip: 'Example tooltip',
+									classes: 'active'
+								};
+							// 14日を無効にする
+							// ※選択させたくない日付に使えるんじゃない？
+							case 14:
+								return false;
+							// 24日のクラスを設定
+							// ※パラメタの種類を指定しない文字列はクラス定義になるよ。
+							case 24:
+								return 'green';
+						}
+				},
+
+				// 日付をパラメーターとした関数（月表示の場合）
+				beforeShowMonth: function (date){
+					// ９月を無効にする
+					// ※選択させたくない月に使えるんじゃない？
+					if (date.getMonth() == 8) {
+						return false;
+					}
+				},
+
+				// 日付をパラメーターとした関数（年表示の場合）
+				beforeShowYear: function (date){
+					// 2007年を無効にする
+					// ※選択させたくない年に使えるんじゃない？
+					if (date.getFullYear() == 2007) {
+						return false;
+					}
+				},
+
+				// 日付をパラメーターとした関数（10年表示の場合）
+				beforeShowDecade: $.noop,
+				/*
+				beforeShowDecade: function (date){
+					// 使う事はないかな？
+				}
+				*/
+
+				// 日付をパラメーターとした関数（世紀表示の場合）
+				beforeShowCentury: $.noop,
+				/*
+				beforeShowCentury: function (date){
+					// 使う事はないかな？
+				}
+				*/
+
+				// 週番号を表示する
+				calendarWeeks: false,
+
+				// ［クリア］ボタンを表示する
+				clearBtn: false,
+
+				// ポップアップを特定の要素に追加
+				container: 'body',
+
+				// 無効にする日付
+				datesDisabled: ['2016/11/06', '2016/11/21'],
+
+				// 無効にする曜日
+				daysOfWeekDisabled: [2,5],
+
+				// ハイライトする曜日
+				daysOfWeekHighlighted: [0,6],
+
+				// カレンダーを最初に開いたときに表示する日付
+				defaultViewDate: { year: 2016, month: 7, day: 4 },
+
+				// モバイルデバイスにキーボードを非表示
+				disableTouchKeyboard: true,
+
+				// Readonly を有効
+				enableOnReadonly: false,
+
+				// 選択可能な最後の日付
+				endDate: '2075/06/04',
+
+				// Datepicker が閉じられているときに入力値の解析を強制する
+				forceParse: false,
+
+				// ２桁での年の入力時の解析方法
+				assumeNearbyYear: false,
+
+				// 日付の形式
+				format: 'yyyy/mm/dd',
+
+				// ［閉じる］ボタンを表示する
+				hideBtn: false,
+
+				// 年または月を選択時に入力値を更新
+				immediateUpdates: true,
+
+				// 範囲選択ツールで使用する入力のリスト
+				inputs: false,
+
+				// 範囲選択ツールで空の値を保持する
+				keepEmptyValues: false,
+
+				// 矢印キーによる日付ナビゲーションを許可
+				keyboardNavigation: true,
+
+				// 言語
+				language: 'ja',
+
+				// ビューモードの最大限度
+				// 0:days, 1:months, 2:years, 3:decades, 4:centuries
+				maxViewMode: 4,
+
+				// ビューモードの最小限度
+				// 0:days, 1:months, 2:years, 3:decades, 4:centuries
+				minViewMode: 0,
+
+				// 複数日付選択を有効
+				multidate: false,
+
+				// 複数日付選択時の区切り文字
+				multidateSeparator: ',',
+
+				// 表示位置（垂直方向、水平方向）
+				// top/bottom/auto left/right/auto
+				orientation: 'bottom right',
+
+				// 右から左の言語
+				rtl: false,
+
+				// 関連付けられた入力フィールドのフォーカス時に、Datepicker を表示
+				showOnFocus: false,
+
+				// 選択可能な最初の日付
+				startDate: '1975/06/05',
+
+				// ビューモードの初期表示
+				// 0:days, 1:months, 2:years, 3:decades, 4:centuries
+				startView: 0,
+
+				// Datepicker のテンプレート
+				templates:{
+					leftArrow: '&laquo;',
+					rightArrow: '&raquo;'
+				},
+
+				// Datepicker のタイトル
+				title: '申請日を選択',
+
+				// ［今日］ボタンの表示
+				// false:非表示、true:表示（クリックしても表示のみ）、linked:クリックで選択
+				todayBtn: false,
+
+				// 今日をハイライト
+				todayHighlight: false,
+
+				// 選択済みの日付を選択した場合に、選択解除
+				toggleActive: false,
+
+				// メソッドで日付変更時にビューモードを変更（？）
+				updateViewDate: true,
+
+				// 週の開始曜日
+				// 0 (Sunday) to 6 (Saturday)
+				weekStart: 1,
+
+				// Datepicker の z-index
+				zIndexOffset: 10
+			});
+
+		});
+	</script>
+</body>
+</html>
+
+<!--
+<i class="material-icons">keyboard_arrow_left</i>
+<i class="material-icons">keyboard_arrow_right</i>
+
+<i class="material-icons">arrow_back</i>
+<i class="material-icons">arrow_forward</i>
+
+<i class="material-icons">chevron_left</i>
+<i class="material-icons">chevron_right</i>
+-->
+
